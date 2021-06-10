@@ -12,7 +12,7 @@ FROM   docker.io/library/ubuntu:20.04
 ENV    DEBIAN_FRONTEND noninteractive
 
 # Download and install everything from the repos.
-RUN    apt-get -y update; apt-get -y upgrade; apt-get -y install software-properties-common curl default-jdk
+RUN    apt-get -y update; apt-get -y upgrade; apt-get -y install software-properties-common curl openjdk-16-jdk
 
 # Load in all of our config files.
 ADD    ./scripts/start /start
